@@ -116,7 +116,7 @@ class Details implements Iterator, Countable, ArrayAccess {
 	 * @param  mixed $offset
 	 */
 	public function offsetUnset($offset) {
-		$this->subtract($value);
+		$this->subtract($this->entries[$offset]);
 
 		unset($this->entries[$offset]);
 	}

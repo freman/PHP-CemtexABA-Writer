@@ -254,7 +254,7 @@ class Descriptive extends Record {
 		if (strlen(trim($this->description_of_file)) == 0)
 			throw new LengthException('Must be set to a non-blank value');
 
-		return sprintf('0%17s%02d%-3s%7s%-26s%06d%-12s%d%40s',
+		return sprintf('0%17s%02d%-3s%7s%-26s%06d%-12s%06d%40s',
 			'',
 			$this->reel_sequence_number % 100,
 			strtoupper($this->financial_institution),

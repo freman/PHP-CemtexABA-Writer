@@ -73,12 +73,16 @@ class Detail extends Record {
 	 * included, e.g. 00-1234.
 	 *
 	 * @throws InvalidArgumentException
+	 * @throws LengthException
 	 * @param  string $account_number
 	 * @return Detail
 	 */
 	public function set_account_number($account_number) {
 		if (!preg_match('/^[\d- ]+$/', $account_number))
 			throw new InvalidArgumentException('Only blanks, hyphens, and numeric supported');
+
+		if (strlen(str_replace(['-', ' '], '', $account_number)) > 9)
+			throw new LengthException('Maximum numeric length is 9 digits');
 
 		$this->account_number = $account_number;
 		return $this;
@@ -144,9 +148,12 @@ class Detail extends Record {
 	/**
 	 * Set the lodgement reference
 	 *
-	 * Field must be left justified, and contain only the 16
-	 * character Employee Benefits Card number; for example
-	 * 5550033890123456 or be blank
+	 * From original Documentation:
+	 * 	Field must be left justified, and contain only the 16
+	 * 	character Employee Benefits Card number; for example
+	 * 	5550033890123456 or be blank
+	 *
+	 * However appears the field can contain anything to 16 characters
 	 *
 	 * @throws InvalidArgumentException
 	 * @param  string $lodgement_reference
@@ -183,7 +190,7 @@ class Detail extends Record {
 	 * @param  string $trace_record_account_number
 	 * @return Detail
 	 */
-	 	public function set_trace_record_account_number($trace_record_account_number) {
+	public function set_trace_record_account_number($trace_record_account_number) {
 		if (!preg_match('/^[\d- ]+$/', $trace_record_account_number))
 			throw new InvalidArgumentException('Only blanks, hyphens, and numeric supported');
 
@@ -343,14 +350,18 @@ class Detail extends Record {
 	 *
 	 * Formats account numbers stripping -'s if needed
 	 *
+	 * @throws LengthException
 	 * @param  string $account_number
 	 * @return string
 	 */
 	private function format_account_number($account_number) {
 		$account_number = trim($account_number);
-		if (strlen($account_number) > 9) {
-			$account_number = strreplace('-', '', $accoutn_number);
-		}
+		if (strlen($account_number) > 9)
+			$account_number = str_replace(['-', ' '], '', $account_number);
+
+		if (strlen($account_number) > 9)
+			throw new LengthException('Maximum numeric length is 9 digits');
+
 		return $account_number;
 	}
 
