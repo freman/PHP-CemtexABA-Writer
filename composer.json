@@ -1,5 +1,5 @@
 {
-	"name" : "fremnet/cemtexaba-writer",
+	"name" : "fremnet/php-cemtexaba-writer",
 	"description" : "Write Australian Bankers Association format files",
 	"homepage" : "https://github/Fremnet/php-cemtexaba-writer",
 	"license" : "GPL-2.0+",
