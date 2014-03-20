@@ -7,7 +7,7 @@
 	"authors" : [ {
 		"name": "Shannon Wynter",
 		"homepage": "http://fremnet.net",
-		"role": Developer"
+		"role": "Developer"
 	} ],
 
 	"autoload": {
