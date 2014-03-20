@@ -1,0 +1,22 @@
+{
+	"name" : "fremnet/php-cemtexaba-writer",
+	"description" : "Write Australian Bankers Association format files",
+	"homepage" : "https://github/Fremnet/php-cemtexaba-writer",
+	"license" : "GPL-2.0+",
+
+	"authors" : [ {
+		"name": "Shannon Wynter",
+		"homepage": "http://fremnet.net",
+		"role": Developer"
+	} ],
+
+	"autoload": {
+		"psr-0": {
+			"fremnet\\cemtexaba": "src/main"
+		}
+	},
+
+	"require": {
+		"php": ">=5.4.0"
+	}
+}
