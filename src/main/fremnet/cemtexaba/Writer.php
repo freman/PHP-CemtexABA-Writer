@@ -113,7 +113,7 @@ class Writer {
 	 */
 	public function clear_details() {
 		$this->details = new Details();
-		return $this
+		return $this;
 	}
 
 	/**
