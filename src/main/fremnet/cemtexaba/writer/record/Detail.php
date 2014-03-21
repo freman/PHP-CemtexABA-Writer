@@ -1,5 +1,6 @@
 <?php namespace fremnet\cemtexaba\writer\record;
 
+use LengthException;
 use InvalidArgumentException;
 use fremnet\cemtexaba\writer\Record;
 use fremnet\cemtexaba\writer\record\detail\Indicator;
