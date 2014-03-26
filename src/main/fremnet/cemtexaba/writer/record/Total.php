@@ -114,7 +114,7 @@ class Total extends Record {
 	 * @return string
 	 */
 	public function __toString() {
-		return sprintf('7999-999%12s%010d%010d%010d%24s%06d%50s',
+		return sprintf('7999-999%12s%010d%010d%010d%24s%06d%40s',
 			'',
 			$this->net_total_amount,
 			$this->credit_total_amount,
