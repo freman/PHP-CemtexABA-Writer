@@ -152,7 +152,7 @@ class Descriptive extends Record {
 	 *
 	 * @return string
 	 */
-	public function get_financial_institution($financial_institution) {
+	public function get_financial_institution() {
 		return $this->financial_institution;
 	}
 
@@ -161,7 +161,7 @@ class Descriptive extends Record {
 	 *
 	 * @return string
 	 */
-	public function get_user_preferred_specification($user_preferred_specification) {
+	public function get_user_preferred_specification() {
 		return $this->user_preferred_specification;
 	}
 
@@ -170,7 +170,7 @@ class Descriptive extends Record {
 	 *
 	 * @return int
 	 */
-	public function get_user_identification_number($user_identification_number) {
+	public function get_user_identification_number() {
 		return $this->user_identification_number;
 	}
 
@@ -179,7 +179,7 @@ class Descriptive extends Record {
 	 *
 	 * @return string
 	 */
-	public function get_description_of_file($description_of_file) {
+	public function get_description_of_file() {
 		return $this->description_of_file;
 	}
 
@@ -188,7 +188,7 @@ class Descriptive extends Record {
 	 *
 	 * @return DateTime
 	 */
-	public function get_date_to_process(DateTime $date_to_process) {
+	public function get_date_to_process() {
 		return $this->date_to_process;
 	}
 

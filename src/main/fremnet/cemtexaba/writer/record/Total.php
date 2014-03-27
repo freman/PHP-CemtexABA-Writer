@@ -74,7 +74,7 @@ class Total extends Record {
 	 *
 	 * @return int cents
 	 */
-	public function get_net_total_amount($net_total_amount) {
+	public function get_net_total_amount() {
 		return $this->net_total_amount;
 	}
 
@@ -83,7 +83,7 @@ class Total extends Record {
 	 *
 	 * @return int cents
 	 */
-	public function get_credit_total_amount($credit_total_amount) {
+	public function get_credit_total_amount() {
 		return $this->credit_total_amount;
 	}
 
@@ -92,7 +92,7 @@ class Total extends Record {
 	 *
 	 * @return int cents
 	 */
-	public function get_debit_total_amount($debit_total_amount) {
+	public function get_debit_total_amount() {
 		return $this->debit_total_amount;
 	}
 
