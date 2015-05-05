@@ -117,7 +117,7 @@ class Descriptive extends Record {
 	 * @return Descriptive
 	 */
 	public function set_description_of_file($description_of_file) {
-		if (strlen(trim($description)) == 0)
+		if (strlen(trim($description_of_file)) == 0)
 			throw new LengthException('Must be set to a non-blank value');
 
 		$this->description_of_file = $description_of_file;
